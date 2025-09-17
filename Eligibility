@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int marks;
+    cout << "Enter your marks: ";
+    cin >> marks;
+
+    try {
+        if (marks < 50) {
+            throw marks;
+        }
+        cout << "You are eligible for admission." << endl;
+    }
+    catch (int m) {
+        cout << "You are not eligible for admission." << endl;
+    }
+
+    return 0;
+}
+
+//output
+Enter your marks: 4
+You are not eligible for admission.
